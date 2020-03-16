@@ -8,7 +8,7 @@ RUN pip install -r requirements.txt
 RUN mkdir -p downloads
 
 COPY odown.py .
-COPY ./downloads/downloadList.txt ./downloads
+COPY ./downloads/downloadList.txt ./downloads/
 RUN cp ./downloads/downloadList.txt ./downloads/updatedDownloads.txt
 
 CMD [ "python", "./odown.py" ]
