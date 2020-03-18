@@ -28,7 +28,7 @@ def main():
     return 1
 
 def get_download_array(display_script):
-    photo_array = display_script[display_script.index(array_start)+len(array_start):redirect_script.index(array_end)]
+    photo_array = display_script[display_script.index(array_start)+len(array_start):display_script.index(array_end)]
     array_size = int(photo_array[photo_array.rindex('[') + 1 :photo_array.rindex(']')]) + 1
     wlansd = [None] * array_size
     exec(photo_array)
@@ -46,7 +46,7 @@ def download_pictures(image_array):
     print('Starting download...')
     for image_name in image_array:
         try:
-            print(str(i) + 'of ' + str(num_downloads) + ': ' + image_name)
+            print(str(i) + ' of ' + str(num_downloads) + ': ' + image_name)
             f = open("./downloads/" + image_name, 'wb')
             f.write(urlopen(URL + image_name).read())
             f.close()
