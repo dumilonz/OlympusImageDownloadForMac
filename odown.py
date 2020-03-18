@@ -36,7 +36,7 @@ def get_download_array(display_script):
     new_downloads = []
     for el in wlansd:
         filename = el[el.index(',') + 1: el.find(',', el.find(',') + 1)]
-        if '.ORF' not in filename and filename not in already_downloaded:
+        if filename not in already_downloaded:
             new_downloads.append(filename)
     return new_downloads
 
