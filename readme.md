@@ -17,13 +17,14 @@ This is a dockerized python application that downloads new pictures from your Ol
 ```bash
     python odown.py 
 ```
+
 When the program is done running (You must see the code output **Done...** in the terminal):
-5. Open a new, second terminal (without closing the first terminal)
-6. Run the following 3 commands:
+
+5. Open a new, second terminal (without closing the first terminal or terminating the docker container)
+6. Run the following bash file 
 ```bash
-    docker cp olympus_downloader:/usr/app/downloads/. ./downloads
-    rm downloads/downloadList.txt 
-    mv downloads/updatedDownloads.txt downloads/downloadList.txt
+    ./move_files
 ```
 
+When this bash script has finished you can terminate all docker containers and close all terminals. Your photos will be downloaded into the downloads folder.
 
