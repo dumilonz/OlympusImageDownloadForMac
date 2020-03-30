@@ -1,4 +1,4 @@
-z=$(docker ps -a | grep "dumilonz/odown" | grep "Up " | awk '{ print $1 }')
+z=$(docker ps -a | grep "olympus_downloader" | grep "Up " | awk '{ print $1 }')
 docker cp $z:/usr/app/downloads/. ./downloads
 rm downloads/downloadList.txt 
 mv downloads/updatedDownloads.txt downloads/downloadList.txt
