@@ -3,3 +3,5 @@
 ./downloads/*.MOV
 ./downloads/*.ORF
 ./downloads/downloads/
+./downloads/JPG/*
+./downloads/ORF/*
