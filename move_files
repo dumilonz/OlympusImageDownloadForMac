@@ -1,9 +1,9 @@
-DOCKER_ID=$(docker ps -a | grep "olympus_downloader" | grep "Up " | awk '{ print $1 }')
+$CONTAINER_ID=$(docker ps -a | grep "$DOCKER_ID" | grep "Up " | awk '{ print $1 }')
 echo "Copying photos and videos to local machine..."
-docker cp $DOCKER_ID:/usr/app/downloads/. ./downloads
+docker cp $CONTAINER_ID:/usr/app/downloads/. ./downloads
 echo "Copying complete..."
 rm downloads/downloadList.txt 
 mv downloads/updatedDownloads.txt downloads/downloadList.txt
-docker stop $DOCKER_ID
+docker stop $CONTAINER_ID
 echo "Container stopped..."
 echo "Done..."
