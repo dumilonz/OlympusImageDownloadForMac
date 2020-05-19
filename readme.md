@@ -29,4 +29,4 @@ When the python program has completed downloading the photos to the docker conta
     ./move_files
 ```
 
-When this bash script has completed you can terminate all docker containers and close all terminals. Your photos will be downloaded into the ./OlympusDownloader/downloads folder on your local machine.
+When this bash script has completed you can terminate all docker containers and close all terminals. Your photos will be downloaded into the *./OlympusDownloader/downloads* folder on your local machine.
